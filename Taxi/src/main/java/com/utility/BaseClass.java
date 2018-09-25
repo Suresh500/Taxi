@@ -68,18 +68,12 @@ public class BaseClass {
 	public static void beforeTest() throws ATUTestRecorderException {
 		String path = System.getProperty("user.dir") + "/log4j.properties";
 		PropertyConfigurator.configure(path);
-
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get(reader.get("StageURL"));
-		
 		
 		/*DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
 		Date date = new Date();
 		recorder = new ATUTestRecorder("D:\\Project\\Script Videos", "TestVideo"
 				+ dateFormat.format(date), true);
-		recorder.start();*/
-		
+		recorder.start();*/	
 	}
 
 	@BeforeMethod

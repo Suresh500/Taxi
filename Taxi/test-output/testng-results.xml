@@ -1,55 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32486" started-at="2018-09-10T11:18:59Z" finished-at="2018-09-10T11:19:31Z">
+  <suite name="Default suite" duration-ms="31938" started-at="2018-09-25T11:33:15Z" finished-at="2018-09-25T11:33:47Z">
     <groups>
+      <group name="Sanity">
+        <method signature="HomePageSuite.TC_001_verifyForgotPasswordProvision()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_001_verifyForgotPasswordProvision" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_003_AccountVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_003_AccountVerification" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_004_OTPVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_004_OTPVerification" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_005_changePassword()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_005_changePassword" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="HomePageSuite.TC_001_verifyForgotPasswordProvision()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_001_verifyForgotPasswordProvision" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_003_AccountVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_003_AccountVerification" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_004_OTPVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_004_OTPVerification" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+        <method signature="HomePageSuite.TC_005_changePassword()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_005_changePassword" class="com.cogniphi.Taxi.testSuites.HomePageSuite"/>
+      </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="32486" started-at="2018-09-10T11:18:59Z" finished-at="2018-09-10T11:19:31Z">
-      <class name="com.cogniphi.Taxi.testSuites.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="beforeTest" is-config="true" duration-ms="31718" started-at="2018-09-10T16:48:59Z" finished-at="2018-09-10T16:49:31Z">
+    <test name="Default test" duration-ms="31938" started-at="2018-09-25T11:33:15Z" finished-at="2018-09-25T11:33:47Z">
+      <class name="com.cogniphi.Taxi.testSuites.HomePageSuite">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeTest" is-config="true" duration-ms="31" started-at="2018-09-25T17:03:15Z" finished-at="2018-09-25T17:03:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeClass" is-config="true" duration-ms="4469" started-at="2018-09-25T17:03:15Z" finished-at="2018-09-25T17:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeMethod" is-config="true" duration-ms="8" started-at="2018-09-25T17:03:20Z" finished-at="2018-09-25T17:03:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.cogniphi.Taxi.testSuites.NewTest.f()]]>
+                <![CDATA[public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_001_verifyForgotPasswordProvision() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="f" duration-ms="8" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        <test-method status="PASS" signature="TC_001_verifyForgotPasswordProvision()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_001_verifyForgotPasswordProvision" duration-ms="919" started-at="2018-09-25T17:03:20Z" finished-at="2018-09-25T17:03:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        </test-method> <!-- TC_001_verifyForgotPasswordProvision -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-25T17:03:21Z" finished-at="2018-09-25T17:03:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=f status=SUCCESS method=NewTest.f()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86] output={null}]]]>
+                <![CDATA[[TestResult name=TC_001_verifyForgotPasswordProvision status=SUCCESS method=HomePageSuite.TC_001_verifyForgotPasswordProvision()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="toEndTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="toEndTest" is-config="true" duration-ms="689" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        <test-method status="FAIL" signature="TC_003_AccountVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_003_AccountVerification" duration-ms="4475" started-at="2018-09-25T17:03:21Z" finished-at="2018-09-25T17:03:25Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [OTP Send Successfully to the registered Mobile Number] but found [OTP send successfully to the registered Mobile Number]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [OTP Send Successfully to the registered Mobile Number] but found [OTP send successfully to the registered Mobile Number]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.cogniphi.Taxi.pages.ForgetPassword.validateAlert(ForgetPassword.java:54)
+	at com.cogniphi.Taxi.testSuites.HomePageSuite.TC_003_AccountVerification(HomePageSuite.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_AccountVerification -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-09-25T17:03:21Z" finished-at="2018-09-25T17:03:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_003_AccountVerification() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterMethod" is-config="true" duration-ms="866" started-at="2018-09-25T17:03:25Z" finished-at="2018-09-25T17:03:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_003_AccountVerification status=FAILURE method=HomePageSuite.TC_003_AccountVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="TC_004_OTPVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_004_OTPVerification" duration-ms="9439" started-at="2018-09-25T17:03:26Z" finished-at="2018-09-25T17:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_OTPVerification -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-09-25T17:03:26Z" finished-at="2018-09-25T17:03:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_004_OTPVerification() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-25T17:03:35Z" finished-at="2018-09-25T17:03:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_004_OTPVerification status=SUCCESS method=HomePageSuite.TC_004_OTPVerification()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="TC_005_changePassword()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="TC_005_changePassword" duration-ms="11125" started-at="2018-09-25T17:03:35Z" finished-at="2018-09-25T17:03:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_changePassword -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-09-25T17:03:35Z" finished-at="2018-09-25T17:03:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_005_changePassword() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-09-25T17:03:47Z" finished-at="2018-09-25T17:03:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_005_changePassword status=SUCCESS method=HomePageSuite.TC_005_changePassword()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="toEndTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="toEndTest" is-config="true" duration-ms="506" started-at="2018-09-25T17:03:47Z" finished-at="2018-09-25T17:03:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toEndTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.NewTest@262b2c86]" name="afterTest" is-config="true" duration-ms="46" started-at="2018-09-10T16:49:31Z" finished-at="2018-09-10T16:49:31Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-09-25T17:03:47Z" finished-at="2018-09-25T17:03:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.cogniphi.Taxi.testSuites.HomePageSuite@27f723]" name="afterTest" is-config="true" duration-ms="62" started-at="2018-09-25T17:03:47Z" depends-on-methods="com.cogniphi.Taxi.testSuites.HomePageSuite.afterClass" finished-at="2018-09-25T17:03:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.cogniphi.Taxi.testSuites.NewTest -->
+      </class> <!-- com.cogniphi.Taxi.testSuites.HomePageSuite -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

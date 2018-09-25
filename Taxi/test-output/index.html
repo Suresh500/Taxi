@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\121\AppData\Local\Temp\testng-eclipse--838913467\testng-customsuite.xml</span>
+                    <span>C:\Users\121\AppData\Local\Temp\testng-eclipse--153231472\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cogniphi.Taxi.testSuites.HomePageSuite" hash-for-method="TC_003_AccountVerification">TC_003_AccountVerification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cogniphi.Taxi.testSuites.NewTest" hash-for-method="f">f</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cogniphi.Taxi.testSuites.HomePageSuite" hash-for-method="TC_001_verifyForgotPasswordProvision">TC_001_verifyForgotPasswordProvision</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cogniphi.Taxi.testSuites.HomePageSuite" hash-for-method="TC_004_OTPVerification">TC_004_OTPVerification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.cogniphi.Taxi.testSuites.HomePageSuite" hash-for-method="TC_005_changePassword">TC_005_changePassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -117,17 +141,81 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.cogniphi.Taxi.testSuites.NewTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.cogniphi.Taxi.testSuites.HomePageSuite</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f">
-                  </a> <!-- f -->
-                  <span class="method-name">f</span>
+                  <a name="TC_003_AccountVerification">
+                  </a> <!-- TC_003_AccountVerification -->
+                  <span class="method-name">TC_003_AccountVerification</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [OTP Send Successfully to the registered Mobile Number] but found [OTP send successfully to the registered Mobile Number]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.cogniphi.Taxi.pages.ForgetPassword.validateAlert(ForgetPassword.java:54)
+	at com.cogniphi.Taxi.testSuites.HomePageSuite.TC_003_AccountVerification(HomePageSuite.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.cogniphi.Taxi.testSuites.HomePageSuite</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_verifyForgotPasswordProvision">
+                  </a> <!-- TC_001_verifyForgotPasswordProvision -->
+                  <span class="method-name">TC_001_verifyForgotPasswordProvision</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_004_OTPVerification">
+                  </a> <!-- TC_004_OTPVerification -->
+                  <span class="method-name">TC_004_OTPVerification</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_005_changePassword">
+                  </a> <!-- TC_005_changePassword -->
+                  <span class="method-name">TC_005_changePassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +223,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\121\AppData\Local\Temp\testng-eclipse--838913467\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\121\AppData\Local\Temp\testng-eclipse--153231472\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +232,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.cogniphi.Taxi.testSuites.NewTest&quot;/&gt;
+      &lt;class name=&quot;com.cogniphi.Taxi.testSuites.HomePageSuite&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -168,6 +256,46 @@
             <span class="header-content">Groups for Default suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_001_verifyForgotPasswordProvision</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_003_AccountVerification</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_004_OTPVerification</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_changePassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_001_verifyForgotPasswordProvision</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_003_AccountVerification</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_004_OTPVerification</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_changePassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_suite" class="panel">
@@ -184,16 +312,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f')
-data.setCell(0, 2, 'com.cogniphi.Taxi.testSuites.NewTest')
-data.setCell(0, 3, 8);
+data.setCell(0, 1, 'TC_005_changePassword')
+data.setCell(0, 2, 'com.cogniphi.Taxi.testSuites.HomePageSuite')
+data.setCell(0, 3, 11125);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TC_004_OTPVerification')
+data.setCell(1, 2, 'com.cogniphi.Taxi.testSuites.HomePageSuite')
+data.setCell(1, 3, 9439);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TC_003_AccountVerification')
+data.setCell(2, 2, 'com.cogniphi.Taxi.testSuites.HomePageSuite')
+data.setCell(2, 3, 4475);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TC_001_verifyForgotPasswordProvision')
+data.setCell(3, 2, 'com.cogniphi.Taxi.testSuites.HomePageSuite')
+data.setCell(3, 3, 919);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 ms</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -219,34 +359,76 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.cogniphi.Taxi.testSuites.NewTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.cogniphi.Taxi.testSuites.HomePageSuite</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">31724 ms</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.cogniphi.Taxi.testSuites.NewTest.f())</span>
-                <span class="method-start">31729 ms</span>
+                <span class="method-name">beforeMethod(public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_001_verifyForgotPasswordProvision() throws...)</span>
+                <span class="method-start">4524 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">f</span>
-                <span class="method-start">31734 ms</span>
+                <span class="method-name">TC_001_verifyForgotPasswordProvision</span>
+                <span class="method-start">4532 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=f status=SUCCESS method=NewTest.f()[pri:0, instance:com.cogniphi.Taxi.testSuites.Ne...)</span>
-                <span class="method-start">31744 ms</span>
+                <span class="method-name">afterMethod([TestResult name=TC_001_verifyForgotPasswordProvision status=SUCCESS method=HomePageSuite.TC_001_ver...)</span>
+                <span class="method-start">5454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_003_AccountVerification</span>
+                <span class="method-start">5456 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_003_AccountVerification() throws java.lang...)</span>
+                <span class="method-start">5456 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_003_AccountVerification status=FAILURE method=HomePageSuite.TC_003_AccountVerifi...)</span>
+                <span class="method-start">9936 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_004_OTPVerification</span>
+                <span class="method-start">10802 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_004_OTPVerification() throws java.lang.Int...)</span>
+                <span class="method-start">10802 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_004_OTPVerification status=SUCCESS method=HomePageSuite.TC_004_OTPVerification()...)</span>
+                <span class="method-start">20242 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC_005_changePassword</span>
+                <span class="method-start">20243 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.cogniphi.Taxi.testSuites.HomePageSuite.TC_005_changePassword() throws java.lang.Inte...)</span>
+                <span class="method-start">20243 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_005_changePassword status=SUCCESS method=HomePageSuite.TC_005_changePassword()[p...)</span>
+                <span class="method-start">31370 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">toEndTest</span>
-                <span class="method-start">31745 ms</span>
+                <span class="method-start">31370 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">31876 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">32436 ms</span>
+                <span class="method-start">31876 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,6 +1,5 @@
 package com.utility;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -24,7 +23,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class SafeActions {
-	static WebDriver driver;
+	 WebDriver driver;
 	private static final Logger log = Logger.getLogger(SafeActions.class.getName());
 	public static ConfigReader reader = new ConfigReader();
 
@@ -32,26 +31,24 @@ public class SafeActions {
 		this.driver = driver;
 	}
 
-	public void openUrl(String url) {
+	 public void openUrl(String url) {
 		try {
 			driver.get(url);
 
 		} catch (WebDriverException e) {
-			e.printStackTrace();
-			sa.fail("URL not found");
+			
+			Assert.fail("URL not found");
 		}
 
 	}
 
 	SoftAssert sa = new SoftAssert();
 
-	public void click_on_the_field(String loc, String elementName, int timeout) {
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		try {
+	public void click_on_the_field(By loc, String elementName) {
+		
+		try {		
 			
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc)));	
-			
-			WebElement element = driver.findElement(By.xpath(loc));
+			WebElement element = driver.findElement(loc);
 			element.click();
 
 		} catch (StaleElementReferenceException e) {
@@ -70,9 +67,10 @@ public class SafeActions {
 
 	}
 
-	public void enter_text_in_texbox(String loc, String value, String elementName) {
+	public void enter_text_in_texbox(By loc, String value, String elementName) {
 		try {
-			WebElement element = driver.findElement(By.xpath(loc));
+			//driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+			WebElement element = driver.findElement(loc);
 			
 			element.sendKeys(value);
 			
@@ -96,10 +94,10 @@ public class SafeActions {
 		
 	}
 
-	public void select_value_in_dropdownByText(String loc, String value, String elementName) {
+	public void select_value_in_dropdownByText(By loc, String value, String elementName) {
 		// new Select(driver.findElement(By.xpath(loc))).selectByVisibleText(value);
 		try {
-			Select element = new Select(driver.findElement(By.xpath(loc)));
+			Select element = new Select(driver.findElement(loc));
 			if(elementName.equalsIgnoreCase("selectByText"))
 			    element.selectByVisibleText(value);
 			else if(elementName.equalsIgnoreCase("selectByValue"))
@@ -123,11 +121,11 @@ public class SafeActions {
 	}
  
 
-	public void validateElemantOnPage(String loc) {
+	public Boolean validateElemantOnPage(By loc, String elementName) {
 
-		if (driver.findElement(By.xpath(loc)).isDisplayed()) {
+		Boolean text = driver.findElement(loc).isDisplayed();
 
-		}
+		return text;
 	}
 
 	public void enterTOFrame(String loc) {
@@ -195,10 +193,10 @@ public class SafeActions {
 	}
 
 	// ---To collect Data from the page---------------\\
-	public String collectData(String loc, String elementName) {
+	public String collectData(By loc, String elementName) {
 		String errorContent = " ";
 		try {
-			String data = driver.findElement(By.xpath(loc)).getText();
+			String data = driver.findElement(loc).getText();
 			return data;
 		} catch (StaleElementReferenceException e) {
 
@@ -215,42 +213,16 @@ public class SafeActions {
 		}
 	}
 
-	public List<WebElement> collectAllElements(String loc, int timeout) throws InterruptedException {
+	public List<WebElement> collectAllElements(By loc){
 
-		Thread.sleep(timeout);
-		List<WebElement> ertNames = driver.findElements(By.xpath(loc));
+		List<WebElement> ertNames = driver.findElements(loc);
 
 		return ertNames;
 	}
 
-	public void markAsperERTAndPerson(String string, int personNumber) {
-
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[contains(text(), 'ERT-" + string
-				+ "DAY-HYD')]/following::table/tbody/tr[" + personNumber + "]/td/div[4]/div/button[1]")));
-		//Actions action = new Actions(driver);
-		
-		  click_on_the_field("//label[contains(text(), 'ERT-" + string +"DAY-HYD')]/following::table/tbody/tr["+personNumber+"]/td/div[4]/div/button[1]", "Attendance", 3000);
-		 
-		/*action.moveToElement(driver.findElement(By.xpath("//label[contains(text(), 'ERT-" + string
-				+ "-KCH')]/following::table/tbody/tr[" + personNumber + "]/td/div[4]/div/button[1]"))).click().build()
-				.perform();*/
-
-	}
-
 	
 
-	public Boolean checkCondition(String string, int personNumber) {
-
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[contains(text(), 'ERT-" + string
-				+ "DAY-HYD')]/following::table/tbody/tr[" + personNumber + "]/td/div[4]/div/button[2]")));
-
-		Boolean text = driver.findElement(By.xpath("//label[contains(text(), 'ERT-" + string
-				+ "DAY-HYD')]/following::table/tbody/tr[" + personNumber + "]/td/div[4]/div/button[2]")).getText()
-				.equals("Clear Attendance");
-		return text;
-	}
+	
 
 	public void scrollUp() {
 		/*
@@ -273,28 +245,7 @@ public class SafeActions {
 
 	}
 
-	static List<String> erts;
-
-	public static  List<String> getStatusOfEachVehicle() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		String path = reader.get("noOfERTs");
-
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(path)));
-		erts = new ArrayList<String>();
-
-		int noOfERTss = driver.findElements(By.xpath(path)).size();
-		 System.out.println(noOfERTss);
-
-		for (int i = 0; i < noOfERTss; i++) {
-			Thread.sleep(1000);
-			// System.out.println(driver.findElements(By.xpath(path)).get(i).getText());
-			String text = driver.findElements(By.xpath(path)).get(i).getText();
-			String texter = text.substring(4, 6);
-			erts.add(i, texter);
-
-		}
-		return erts;
-	}
+	
 	
 	public String getText(String loc) {
 		WebElement element = driver.findElement(By.xpath(loc));
@@ -303,32 +254,23 @@ public class SafeActions {
 		return text;
 
 	}
-	
-	public List<String> getElementsFromDropdown(String loc, String elementName) {
-		WebDriverWait wait = new WebDriverWait(driver, 300);
-		List<String> errorContent = null;
-		erts = new ArrayList<String>();
-	try {		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc)));
-		List<WebElement> text = new Select(driver.findElement(By.xpath("//select[@id='vehicledrpdwn']"))).getOptions();
-		//System.err.println(text.get);
-		for (int i = 0; i < text.size(); i++) {
-			String text1 = text.get(i).getText();
-			erts.add(text1);
+	public String verifyAlertText() {
+		String empty = "";
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 100);
+			wait.until(ExpectedConditions.alertIsPresent());
+		String text = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		return text;
+		}catch(NoAlertPresentException e) {
+			log.info("alerts not available");
+			return empty;
 		}
-			System.out.println(erts);
-			return erts;
-		
-	} catch (StaleElementReferenceException e) {
-		Assert.fail(elementName + "is not attached to the page document - StaleElementReferenceException");		
-		return errorContent;
-	} catch (NoSuchElementException e) {
-		Assert.fail(elementName + " was not found in DOM in time - Seconds" + " - NoSuchElementException");		
-		return errorContent;
-	} catch (Exception e) {
-		Assert.fail(elementName + " was not found on the web page");
-		return errorContent;
+	
 	}
+	public void clearDataFrom(By loc, String elementName) {
+		driver.findElement(loc).clear();
 	}
+	
 	
 }
