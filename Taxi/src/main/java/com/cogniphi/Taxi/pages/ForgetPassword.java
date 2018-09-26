@@ -41,7 +41,7 @@ public class ForgetPassword extends BaseClass {
 		 * WebDriverWait wait = new WebDriverWait(driver, 100);
 		 * wait.until(ExpectedConditions.alertIsPresent());
 		 */
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		// driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// driver.switchTo().alert().accept();
 
